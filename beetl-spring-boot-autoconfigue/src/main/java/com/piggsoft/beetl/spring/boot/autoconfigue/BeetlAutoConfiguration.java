@@ -25,12 +25,17 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties(BeetlProperties.class)
 public class BeetlAutoConfiguration {
 
+    private BeetlProperties properties;
+
+    public BeetlAutoConfiguration(BeetlProperties properties) {
+        this.properties = properties;
+    }
 
     @Bean(initMethod = "init", name = "beetlConfig")
     public BeetlGroupUtilConfiguration getBeetlGroupUtilConfiguration() {
         BeetlGroupUtilConfiguration beetlGroupUtilConfiguration = new BeetlGroupUtilConfiguration();
         try {
-            ClasspathResourceLoader cploder = new ClasspathResourceLoader(BeetlAutoConfiguration.class.getClassLoader(), "templatesPath");
+            ClasspathResourceLoader cploder = new ClasspathResourceLoader(BeetlAutoConfiguration.class.getClassLoader(), properties.getTemplatesPath());
             beetlGroupUtilConfiguration.setResourceLoader(cploder);
             return beetlGroupUtilConfiguration;
         } catch (Exception e) {

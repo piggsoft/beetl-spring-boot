@@ -20,4 +20,13 @@ public class BeetlProperties {
 
     public static final String BEETL_PREFIX = "beetl";
 
+    private String templatesPath;
+
+    public String getTemplatesPath() {
+        return templatesPath;
+    }
+
+    public void setTemplatesPath(String templatesPath) {
+        this.templatesPath = templatesPath;
+    }
 }

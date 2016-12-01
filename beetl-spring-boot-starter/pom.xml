@@ -12,4 +12,14 @@
     <artifactId>beetl-spring-boot-starter</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>com.piggsoft</groupId>
+            <artifactId>beetl-spring-boot-autoconfigue</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ibeetl</groupId>
+            <artifactId>beetl</artifactId>
+        </dependency>
+    </dependencies>
 </project>

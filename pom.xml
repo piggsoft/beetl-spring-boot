@@ -21,6 +21,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>com.piggsoft</groupId>
+                <artifactId>beetl-spring-boot-autoconfigue</artifactId>
+                <version>0.0.1</version>
+            </dependency>
+            <dependency>
                 <groupId>com.ibeetl</groupId>
                 <artifactId>beetl</artifactId>
                 <version>${beetl.version}</version>
