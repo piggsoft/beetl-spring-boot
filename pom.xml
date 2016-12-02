@@ -13,6 +13,24 @@
     </modules>
     <packaging>pom</packaging>
 
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>piggsoft</name>
+            <email>piggsoft@163.com</email>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git@github.com/piggsoft/beetl-spring-boot.git</connection>
+        <developerConnection>scm:git:git@github.com/piggsoft/beetl-spring-boot.git</developerConnection>
+        <url>git@github.com/piggsoft/beetl-spring-boot.git</url>
+    </scm>
+
     <properties>
         <beetl.version>2.7.0</beetl.version>
         <spring-boot.version>1.4.2.RELEASE</spring-boot.version>
