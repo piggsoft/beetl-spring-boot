@@ -1,4 +1,4 @@
 beetl:
-  templates-path:
+  templates-path: templates
   config:
     html-tag-flag: true
