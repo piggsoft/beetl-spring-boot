@@ -10,7 +10,7 @@ auto configuration beetl for spring boot
 <dependency>
     <groupId>com.piggsoft</groupId>
     <artifactId>beetl-spring-boot-starter</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 </dependency>
 ```
 * config the `application.yaml`

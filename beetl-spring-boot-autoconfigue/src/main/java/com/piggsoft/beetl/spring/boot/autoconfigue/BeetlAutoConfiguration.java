@@ -13,6 +13,7 @@ import org.beetl.ext.spring.BeetlGroupUtilConfiguration;
 import org.beetl.ext.spring.BeetlSpringViewResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.web.WebMvcProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,6 +34,9 @@ public class BeetlAutoConfiguration {
 
     @Autowired
     private BeetlProperties properties;
+
+    @Autowired
+    private WebMvcProperties webMvcProperties;
 
     /**
      * 自定义函数
@@ -140,6 +144,15 @@ public class BeetlAutoConfiguration {
         beetlSpringViewResolver.setContentType("text/html;charset=UTF-8");
         beetlSpringViewResolver.setOrder(0);
         beetlSpringViewResolver.setConfig(beetlGroupUtilConfiguration);
+        if (webMvcProperties != null && webMvcProperties.getView() != null) {
+            WebMvcProperties.View view = webMvcProperties.getView();
+            if (!StringUtils.isEmpty(view.getPrefix())) {
+                beetlSpringViewResolver.setPrefix(view.getPrefix());
+            }
+            if (!StringUtils.isEmpty(view.getSuffix())) {
+                beetlSpringViewResolver.setSuffix(view.getSuffix());
+            }
+        }
         return beetlSpringViewResolver;
     }
 
