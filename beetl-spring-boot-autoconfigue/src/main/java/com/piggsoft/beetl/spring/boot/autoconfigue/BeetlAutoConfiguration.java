@@ -11,7 +11,9 @@ import org.beetl.core.*;
 import org.beetl.core.resource.ClasspathResourceLoader;
 import org.beetl.ext.spring.BeetlGroupUtilConfiguration;
 import org.beetl.ext.spring.BeetlSpringViewResolver;
+import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.web.WebMvcProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -30,6 +32,7 @@ import java.util.Map;
  */
 @Configuration
 @EnableConfigurationProperties(BeetlProperties.class)
+@Configurable(autowire = Autowire.BY_NAME)
 public class BeetlAutoConfiguration {
 
     @Autowired
@@ -114,8 +117,8 @@ public class BeetlAutoConfiguration {
              if (tagFactorys != null) {
                 beetlGroupUtilConfiguration.setTagFactorys(tagFactorys);
             }
-             if (functionPackages != null) {
-                beetlGroupUtilConfiguration.setFunctionPackages(functionPackages);
+             if (functionPackages != null && functionPackages.get("beetlFunctionPackages") != null) {
+                beetlGroupUtilConfiguration.setFunctionPackages((Map<String, Object>) functionPackages.get("beetlFunctionPackages"));
             }
              if (virtualClassAttributes != null) {
                 beetlGroupUtilConfiguration.setVirtualClassAttributes(virtualClassAttributes);
@@ -126,8 +129,8 @@ public class BeetlAutoConfiguration {
              if (errorHandler != null) {
                 beetlGroupUtilConfiguration.setErrorHandler(errorHandler);
             }
-             if (sharedVars != null) {
-                beetlGroupUtilConfiguration.setSharedVars(sharedVars);
+             if (sharedVars != null && sharedVars.get("beetlSharedVars") != null) {
+                beetlGroupUtilConfiguration.setSharedVars((Map<String, Object>) sharedVars.get("beetlSharedVars"));
             }
 
             beetlGroupUtilConfiguration.setResourceLoader(cploder);
