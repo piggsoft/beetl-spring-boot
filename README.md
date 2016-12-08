@@ -22,4 +22,5 @@ beetl:
 ```
 
 ## Change log
-* 0.0.3 修改@Autowired 在Map<String, Object> 上的异常表现，并重新发布版本
+* 0.0.3 修改`@Autowired` 在`Map<String, Object>` 上的异常表现，并重新发布版本
+* 0.0.2 加上后缀配置，后缀配置使用spring的`WebMvcProperties`
