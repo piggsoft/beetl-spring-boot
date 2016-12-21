@@ -1,4 +1,9 @@
+
 beetl:
-  templates-path: templates
+  templates-path: templates/
   config:
     html-tag-flag: true
+spring:
+  mvc:
+    view:
+      suffix: .html
