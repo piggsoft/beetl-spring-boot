@@ -1,4 +1,4 @@
-# beetl-spring-boot(https://github.com/piggsoft/beetl-spring-boot) 
+# [beetl-spring-boot](https://github.com/piggsoft/beetl-spring-boot) 
 一个是辅助将beetl加入到spring-boot的脚手架，开箱即用。让用户更少的关注beetl集成的配置，更多的关注于beetl本身。
 
 ## Useage
