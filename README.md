@@ -1,7 +1,7 @@
 # [beetl-spring-boot](https://github.com/piggsoft/beetl-spring-boot) 
 一个是辅助将beetl加入到spring-boot的脚手架，开箱即用。让用户更少的关注beetl集成的配置，更多的关注于beetl本身。
 
-## Useage
+## Usage
 哪些需要使用模板，并同时打算使用spring-boot的系统，强烈推荐beetl-spring-boot-starter
 
 ## Get Start
