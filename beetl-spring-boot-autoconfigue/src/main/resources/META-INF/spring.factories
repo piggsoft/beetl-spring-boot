@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.piggsoft.beetl.spring.boot.autoconfigue.BeetlAutoConfiguration
